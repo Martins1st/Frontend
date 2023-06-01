@@ -1,0 +1,22 @@
+<div class="container custom-container">
+    <div class="card custom-card">
+        <h2 class="text-center">Login</h2>
+        <ng-container [formGroup]="form">
+            <div class="form-group mb-3">
+                <label for="exampleInputEmail1">Login</label>
+                <input formControlName="login" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group mb-3">
+                <label for="exampleInputPassword1">Senha</label>
+                <input formControlName="senha" type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="text-center">
+                <button type="submit" (click)="login()" class="btn custom-btn">Entrar</button>
+            </div>
+            
+        </ng-container>
+        <div class="text-center mt-3">
+            <a routerLink="../registrar" routerLinkActive="router-link-active"  class="text-primary">Criar uma conta</a>
+        </div>
+    </div>
+  </div>

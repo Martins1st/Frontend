@@ -1,0 +1,40 @@
+<div class="container custom-container">
+    <div class="card custom-card">
+        <h2 class="text-center">Listagem de Clientes</h2>
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Orçamento Inicial</th>
+                    <th scope="col">Data de Criação</th>
+                    <th scope="col">Data de Atualização</th>
+                    <th scope="col">Acoes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cliente of clientes">
+                    <th scope="row">{{cliente.id}}</th>
+                    <td>{{cliente.nome}}</td>
+                    <td>{{cliente.orcamentoInicial | currency:'BRL' }}</td>
+                    <td>{{cliente.dataCriacao | date:'dd/MM/yyyy HH:mm:ss' }}</td>
+                    <td>
+                        <ng-container *ngIf="cliente.dataAtualizacao != null">
+                            {{cliente.dataAtualizacao | date:'dd/MM/yyyy HH:mm:ss' }}
+                        </ng-container>
+                    </td>
+                    <td>
+                        <div (click)="deletar(cliente.id)" class="trash">
+                            <div class="remove-btn"></div>
+                        </div>
+                        <div [routerLink]="['/cliente/editar/' + cliente.id]" class="edit-icon"></div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div class="text-center mt-3">
+            <a routerLink="/cliente/adicionar" class="btn custom-btn">Adicionar Cliente</a>
+        </div>
+    </div>
+</div>

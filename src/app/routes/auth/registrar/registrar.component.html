@@ -1,0 +1,23 @@
+<div class="container custom-container">
+    <div class="card custom-card">
+        <h2 class="text-center">Registro</h2>
+        <form [formGroup]="form">
+            <div class="form-group mb-3">
+                <label for="exampleInputEmail1">Login</label>
+                <input formControlName="login" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group mb-3">
+                <label for="exampleInputPassword1">Senha</label>
+                <input formControlName="senha" type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group mb-3">
+                <label for="exampleInputPassword2">Confirme a Senha</label>
+                <input formControlName="confirmarSenha" type="password" class="form-control" id="exampleInputPassword2">
+            </div>
+            <div class="text-center">
+                <button type="submit" (click)="registrar()" class="btn custom-btn">Registrar</button>
+            </div>
+            
+        </form>
+    </div>
+</div>

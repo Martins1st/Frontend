@@ -1,0 +1,19 @@
+<div class="container custom-container">
+    <div class="card custom-card">
+        <h2 class="text-center">Adicionar Cliente</h2>
+        <form [formGroup]="form">
+            <div class="form-group mb-3">
+                <label for="clientName">Nome</label>
+                <input formControlName="nome" type="text" class="form-control" id="clientName">
+            </div>
+            <div class="form-group mb-3">
+                <label for="initialBudget">Orçamento Inicial</label>
+                <input formControlName="orcamentoInicial" type="number" class="form-control" id="initialBudget">
+            </div>
+            <button type="submit" (click)="salvar()" class="btn custom-btn btn-block">{{tituloBotao}}</button>
+        </form>
+        <div class="text-center mt-3">
+            <a routerLink="/cliente/listar" class="btn btn-light">Voltar para lista de clientes</a>
+        </div>
+    </div>
+</div>

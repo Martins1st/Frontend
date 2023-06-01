@@ -1,0 +1,50 @@
+.custom-container {
+    max-width: 1500px!important;
+    margin: auto!important;
+    padding: 10px!important;
+}
+.remove-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.remove-btn:before,
+.remove-btn:after {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 2px;
+    top: 0;
+    left: 50%;
+    background-color: #ff0000;
+}
+.remove-btn:before {
+    transform: translateX(-50%) rotate(45deg);
+}
+.remove-btn:after {
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+
+.edit-icon {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 24px solid black;
+    position: relative;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.edit-icon:after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    right: -6px;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-bottom: 3px solid black;
+}
